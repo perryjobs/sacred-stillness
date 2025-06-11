@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sacred Stillness - Wellness & Prayer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS Animation Library -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Fonts (Optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-white to-green-100 text-gray-800 font-sans">
-<script>
-  AOS.init({
-    duration: 1200,
-    easing: 'ease-in-out',
-    once: true,
-  });
-</script>
+<body class="bg-gradient-to-b from-white to-green-100 text-gray-800">
 
   <!-- Header -->
-  <header class="text-center py-10 bg-green-200 shadow">
+  <header class="text-center py-10 bg-green-200 shadow" data-aos="fade-down">
     <h1 class="text-4xl font-bold text-green-900">Sacred Stillness</h1>
     <p class="text-lg text-green-800 mt-2">Find peace through prayer, meditation, and mindful wellness</p>
   </header>
 
   <!-- Hero Section -->
-  <section data-aos="fade-up" class="text-center py-16 px-6 bg-white">
+  <section class="text-center py-16 px-6 bg-white" data-aos="fade-up">
     <h2 class="text-3xl md:text-4xl font-semibold mb-4">Reconnect with Your Spirit</h2>
     <p class="text-lg mb-6 max-w-xl mx-auto">Daily inspiration, guided prayers, and tools for inner healing to nourish your soul and bring clarity.</p>
     <a href="#prayers" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition">Explore Daily Prayers</a>
   </section>
 
   <!-- Daily Quote -->
-  <section data-aos="fade-up" class="bg-green-50 py-12 px-6">
+  <section class="bg-green-50 py-12 px-6" data-aos="fade-up">
     <div class="max-w-2xl mx-auto text-center">
       <h3 class="text-xl font-semibold mb-4 text-green-800">🌞 Daily Wisdom</h3>
       <blockquote class="italic text-gray-700 text-lg">
@@ -43,8 +46,8 @@
   </section>
 
   <!-- Prayer and Wellness Sections -->
-  <section data-aos="fade-up" class="grid md:grid-cols-2 gap-8 px-8 py-16">
-    <div id="prayers">
+  <section class="grid md:grid-cols-2 gap-8 px-8 py-16">
+    <div id="prayers" data-aos="fade-right">
       <h3 class="text-2xl font-bold text-green-800 mb-4">🙏 Guided Prayers</h3>
       <p>Find morning, evening, healing, and gratitude prayers to guide your spirit each day. </p>
       <ul class="list-disc ml-6 mt-4 text-gray-700">
@@ -54,7 +57,7 @@
         <li>Peace & Forgiveness</li>
       </ul>
     </div>
-    <div>
+    <div data-aos="fade-left">
       <h3 class="text-2xl font-bold text-green-800 mb-4">🧘 Mindful Wellness</h3>
       <p>Explore tips on meditation, breathing exercises, holistic wellness, and spiritual journaling.</p>
       <ul class="list-disc ml-6 mt-4 text-gray-700">
@@ -65,13 +68,36 @@
     </div>
   </section>
 
+  <!-- Prayer Audio -->
+  <section class="text-center py-12 bg-green-50" data-aos="fade-up">
+    <h3 class="text-2xl font-bold text-green-800 mb-4">🎧 Listen to a Guided Prayer</h3>
+    <p class="text-gray-700 mb-4">Let this prayer calm your heart and center your spirit.</p>
+    <audio controls class="mx-auto mt-4">
+      <source src="audio/morning-prayer.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="py-12 px-6 bg-white" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-green-800 mb-6">📝 Reflections from the Blog</h3>
+      <article class="mb-6 text-left border-b pb-4">
+        <h4 class="text-xl font-semibold text-green-700">The Power of Morning Stillness</h4>
+        <p class="text-sm text-gray-500">June 6, 2025</p>
+        <p class="mt-2">Each morning is a fresh beginning. Here's how you can center your spirit before the noise of the world begins...</p>
+        <a href="blog.html" class="text-green-600 hover:underline">Read more →</a>
+      </article>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section data-aos="fade-up" class="bg-green-100 py-12 text-center">
+  <section class="bg-green-100 py-12 text-center" data-aos="fade-up">
     <h3 class="text-2xl font-bold text-green-900">📬 Stay Connected</h3>
     <p class="text-gray-700 mt-2">Receive weekly reflections and prayer guides straight to your inbox.</p>
     <form class="mt-6 max-w-md mx-auto">
-      <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-l-full border border-gray-300">
-      <button type="submit" class="mt-4 px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700">Subscribe</button>
+      <input type="email" placeholder="Your email" class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4" />
+      <button type="submit" class="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700">Subscribe</button>
     </form>
   </section>
 
@@ -79,5 +105,16 @@
   <footer class="bg-green-200 text-center text-sm py-6 text-green-800">
     © 2025 Sacred Stillness. All rights reserved.
   </footer>
+
+  <!-- AOS JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
+
 </body>
 </html>
