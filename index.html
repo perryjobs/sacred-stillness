@@ -5,8 +5,19 @@
   <title>Sacred Stillness - Wellness & Prayer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 </head>
 <body class="bg-gradient-to-b from-white to-green-100 text-gray-800 font-sans">
+<script>
+  AOS.init({
+    duration: 1200,
+    easing: 'ease-in-out',
+    once: true,
+  });
+</script>
 
   <!-- Header -->
   <header class="text-center py-10 bg-green-200 shadow">
@@ -15,14 +26,14 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="text-center py-16 px-6 bg-white">
+  <section data-aos="fade-up" class="text-center py-16 px-6 bg-white">
     <h2 class="text-3xl md:text-4xl font-semibold mb-4">Reconnect with Your Spirit</h2>
     <p class="text-lg mb-6 max-w-xl mx-auto">Daily inspiration, guided prayers, and tools for inner healing to nourish your soul and bring clarity.</p>
     <a href="#prayers" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition">Explore Daily Prayers</a>
   </section>
 
   <!-- Daily Quote -->
-  <section class="bg-green-50 py-12 px-6">
+  <section data-aos="fade-up" class="bg-green-50 py-12 px-6">
     <div class="max-w-2xl mx-auto text-center">
       <h3 class="text-xl font-semibold mb-4 text-green-800">🌞 Daily Wisdom</h3>
       <blockquote class="italic text-gray-700 text-lg">
@@ -32,7 +43,7 @@
   </section>
 
   <!-- Prayer and Wellness Sections -->
-  <section class="grid md:grid-cols-2 gap-8 px-8 py-16">
+  <section data-aos="fade-up" class="grid md:grid-cols-2 gap-8 px-8 py-16">
     <div id="prayers">
       <h3 class="text-2xl font-bold text-green-800 mb-4">🙏 Guided Prayers</h3>
       <p>Find morning, evening, healing, and gratitude prayers to guide your spirit each day. </p>
@@ -55,7 +66,7 @@
   </section>
 
   <!-- Contact -->
-  <section class="bg-green-100 py-12 text-center">
+  <section data-aos="fade-up" class="bg-green-100 py-12 text-center">
     <h3 class="text-2xl font-bold text-green-900">📬 Stay Connected</h3>
     <p class="text-gray-700 mt-2">Receive weekly reflections and prayer guides straight to your inbox.</p>
     <form class="mt-6 max-w-md mx-auto">
