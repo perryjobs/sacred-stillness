@@ -21,36 +21,7 @@
   </style>
 </head>
 <body class="bg-gradient-to-b from-white to-green-100 text-gray-800">
-
-  <div class="fixed bottom-6 right-6 z-50">
-  <button onclick="toggleAmbient()" id="ambientBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full shadow">
-    🔊 Play Ambient
-  </button>
-</div>
-
-<audio id="ambientAudio" loop>
-  <source src="audio/ambient-stream.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
-
-<script>
-  let isPlaying = false;
-  const audio = document.getElementById("ambientAudio");
-  const btn = document.getElementById("ambientBtn");
-
-  function toggleAmbient() {
-    if (isPlaying) {
-      audio.pause();
-      btn.textContent = "🔊 Play Ambient";
-    } else {
-      audio.play();
-      btn.textContent = "🔇 Stop Ambient";
-    }
-    isPlaying = !isPlaying;
-  }
-</script>
-
-
+  
   <!-- Header -->
   <header class="text-center py-10 bg-green-200 shadow" data-aos="fade-down">
     <h1 class="text-4xl font-bold text-green-900">Sacred Stillness</h1>
