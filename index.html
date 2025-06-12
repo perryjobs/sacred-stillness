@@ -36,12 +36,13 @@
   </section>
 
   <!-- Daily Quote -->
-  <section class="bg-green-50 py-10">
+ <section class="bg-green-50 py-10">
   <div class="max-w-2xl mx-auto px-4 text-center">
-    <h2 class="text-2xl font-bold text-green-900 mb-4">Daily Inspiration</h2>
-    <blockquote id="daily-quote" class="italic text-gray-700 text-lg">
-      Loading quote...
+    <h2 class="text-2xl font-bold text-green-900 mb-4">Verse of the Day (KJV)</h2>
+    <blockquote id="daily-verse" class="italic text-gray-700 text-lg">
+      Loading verse...
     </blockquote>
+    <p id="daily-reference" class="text-green-700 mt-2 font-semibold"></p>
   </div>
 </section>
 
@@ -143,20 +144,41 @@
     isPlaying = !isPlaying;
   }
 </script>
+
   <script>
-  async function loadDailyQuote() {
+  const kjvVerses = [
+    "Psalm 23:1", "Isaiah 41:10", "Romans 8:28", "Proverbs 3:5", "Philippians 4:13",
+    "John 3:16", "2 Timothy 1:7", "Matthew 11:28", "Psalm 46:10", "Joshua 1:9",
+    "Romans 12:2", "Psalm 118:24", "James 1:5", "1 Peter 5:7", "Isaiah 40:31",
+    "Psalm 91:1", "Hebrews 11:1", "John 14:27", "Galatians 6:9", "Matthew 6:33",
+    "2 Corinthians 5:7", "Ephesians 2:8", "Matthew 5:14", "Psalm 34:8", "Lamentations 3:23"
+  ];
+
+  function getVerseOfTheDayIndex() {
+    const today = new Date();
+    const dayOfYear = Math.floor(
+      (today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24)
+    );
+    return dayOfYear % kjvVerses.length;
+  }
+
+  async function loadVerseOfTheDay() {
+    const index = getVerseOfTheDayIndex();
+    const reference = kjvVerses[index];
     try {
-      const res = await fetch("https://zenquotes.io/api/today");
+      const res = await fetch(`https://bible-api.com/${reference}?translation=kjv`);
       const data = await res.json();
-      const quote = data[0].q + " — " + data[0].a;
-      document.getElementById("daily-quote").textContent = quote;
+      document.getElementById("daily-verse").textContent = `"${data.text.trim()}"`;
+      document.getElementById("daily-reference").textContent = `— ${data.reference}`;
     } catch (e) {
-      document.getElementById("daily-quote").textContent = "“Be still and know.” — Psalm 46:10";
+      document.getElementById("daily-verse").textContent = "“Be still and know that I am God.”";
+      document.getElementById("daily-reference").textContent = "— Psalm 46:10";
     }
   }
 
-  loadDailyQuote();
+  loadVerseOfTheDay();
 </script>
 
+  
 </body>
 </html>
