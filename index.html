@@ -115,6 +115,34 @@
       once: true,
     });
   </script>
+<!-- Ambient Sound Toggle -->
+<div class="fixed bottom-6 right-6 z-50">
+  <button onclick="toggleAmbient()" id="ambientBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full shadow">
+    🔊 Ambient Sound
+  </button>
+</div>
+
+<audio id="ambientAudio" loop>
+  <source src="audio/ambient-stream.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  let isPlaying = false;
+  const audio = document.getElementById("ambientAudio");
+  const btn = document.getElementById("ambientBtn");
+
+  function toggleAmbient() {
+    if (isPlaying) {
+      audio.pause();
+      btn.textContent = "🔊 Ambient Sound";
+    } else {
+      audio.play();
+      btn.textContent = "🔇 Stop Ambient";
+    }
+    isPlaying = !isPlaying;
+  }
+</script>
 
 </body>
 </html>
