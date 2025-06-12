@@ -3,214 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sacred Stillness - Wellness & Prayer</title>
+  <title>Sacred Stillness</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS (Animate On Scroll) CSS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Fonts (Optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body class="bg-gradient-to-b from-white to-green-100 text-gray-800">
-  
+<body class="bg-white text-gray-800">
   <!-- Header -->
-  <header class="text-center py-10 bg-green-200 shadow" data-aos="fade-down">
-    <h1 class="text-4xl font-bold text-green-900">Sacred Stillness</h1>
-    <p class="text-lg text-green-800 mt-2">Find peace through prayer, meditation, and mindful wellness</p>
+  <header class="bg-green-100 text-center py-10">
+    <h1 class="text-4xl font-bold text-green-800">Sacred Stillness</h1>
+    <p class="text-green-700 mt-2">A space for wellness, prayer, and peace</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="text-center py-16 px-6 bg-white" data-aos="fade-up">
-    <h2 class="text-3xl md:text-4xl font-semibold mb-4">Reconnect with Your Spirit</h2>
-    <p class="text-lg mb-6 max-w-xl mx-auto">Daily inspiration, guided prayers, and tools for inner healing to nourish your soul and bring clarity.</p>
-    <a href="#prayers" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition">Explore Daily Prayers</a>
-  </section>
-
-  <!-- Daily Quote -->
- <section class="bg-green-50 py-10">
-  <div class="max-w-2xl mx-auto px-4 text-center">
-    <h2 class="text-2xl font-bold text-green-900 mb-4">Verse of the Day (KJV)</h2>
-    <blockquote id="daily-verse" class="italic text-gray-700 text-lg">
-      Loading verse...
-    </blockquote>
-    <p id="daily-reference" class="text-green-700 mt-2 font-semibold"></p>
-  </div>
-</section>
-
-  <!-- Prayer and Wellness Sections -->
-  <section class="grid md:grid-cols-2 gap-8 px-8 py-16">
-    <div id="prayers" data-aos="fade-right">
-      <h3 class="text-2xl font-bold text-green-800 mb-4">🙏 Guided Prayers</h3>
-      <p>Find morning, evening, healing, and gratitude prayers to guide your spirit each day. </p>
-      <ul class="list-disc ml-6 mt-4 text-gray-700">
-        <li>Morning Prayer</li>
-        <li>Healing Prayer</li>
-        <li>Gratitude Reflection</li>
-        <li>Peace & Forgiveness</li>
-      </ul>
+  <!-- Verse of the Day -->
+  <section class="bg-green-50 py-10">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-green-900 mb-4">Verse of the Day (KJV)</h2>
+      <blockquote id="daily-verse" class="italic text-gray-700 text-lg">Loading verse...</blockquote>
+      <p id="daily-reference" class="text-green-700 mt-2 font-semibold"></p>
     </div>
-    <div data-aos="fade-left">
-      <h3 class="text-2xl font-bold text-green-800 mb-4">🧘 Mindful Wellness</h3>
-      <p>Explore tips on meditation, breathing exercises, holistic wellness, and spiritual journaling.</p>
-      <ul class="list-disc ml-6 mt-4 text-gray-700">
-        <li>5-Minute Guided Meditation</li>
-        <li>Faith & Wellness Blog</li>
-        <li>Stress Relief Through Breath</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Prayer Audio -->
-  <section class="text-center py-12 bg-green-50" data-aos="fade-up">
-    <h3 class="text-2xl font-bold text-green-800 mb-4">🎧 Listen to a Guided Prayer</h3>
-    <p class="text-gray-700 mb-4">Let this prayer calm your heart and center your spirit.</p>
-    <audio controls class="mx-auto mt-4">
-      <source src="audio/morning-prayer.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
   </section>
 
   <!-- Blog Section -->
-  <section class="py-12 px-6 bg-white" data-aos="fade-up">
-    <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-2xl font-bold text-green-800 mb-6">📝 Reflections from the Blog</h3>
-      <article class="mb-6 text-left border-b pb-4">
-        <h4 class="text-xl font-semibold text-green-700">The Power of Morning Stillness</h4>
-        <p class="text-sm text-gray-500">June 6, 2025</p>
-        <p class="mt-2">Each morning is a fresh beginning. Here's how you can center your spirit before the noise of the world begins...</p>
-        <a href="blog.html" class="text-green-600 hover:underline">Read more →</a>
-      </article>
+  <section class="py-10 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-green-800 mb-6">Recent Blog Posts</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <li class="bg-green-50 p-4 rounded shadow">
+          <a href="posts/morning-stillness.html" class="text-xl font-semibold text-green-900 hover:underline">Morning Stillness</a>
+          <p class="text-sm text-gray-600">Finding peace before the world awakes</p>
+        </li>
+        <li class="bg-green-50 p-4 rounded shadow">
+          <a href="posts/quiet-confidence.html" class="text-xl font-semibold text-green-900 hover:underline">Quiet Confidence</a>
+          <p class="text-sm text-gray-600">Building trust in God's promises</p>
+        </li>
+        <li class="bg-green-50 p-4 rounded shadow">
+          <a href="posts/breath-of-prayer.html" class="text-xl font-semibold text-green-900 hover:underline">The Breath of Prayer</a>
+          <p class="text-sm text-gray-600">Connecting to the Divine with every breath</p>
+        </li>
+        <li class="bg-green-50 p-4 rounded shadow">
+          <a href="posts/walking-light.html" class="text-xl font-semibold text-green-900 hover:underline">Walking in Light</a>
+          <p class="text-sm text-gray-600">Living the path of spiritual clarity</p>
+        </li>
+        <li class="bg-green-50 p-4 rounded shadow">
+          <a href="posts/sacred-rhythm.html" class="text-xl font-semibold text-green-900 hover:underline">Sacred Rhythm</a>
+          <p class="text-sm text-gray-600">Establishing daily spiritual habits</p>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="bg-green-100 py-12 text-center" data-aos="fade-up">
-    <h3 class="text-2xl font-bold text-green-900">📬 Stay Connected</h3>
-    <p class="text-gray-700 mt-2">Receive weekly reflections and prayer guides straight to your inbox.</p>
-    <form class="mt-6 max-w-md mx-auto">
-      <input type="email" placeholder="Your email" class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4" />
-      <button type="submit" class="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700">Subscribe</button>
-    </form>
+  <!-- Subscribe Section -->
+  <section class="bg-green-100 py-10">
+    <div class="max-w-xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-green-900 mb-4">Subscribe for Daily Inspiration</h2>
+      <form action="https://formspree.io/f/your_subscribe_form" method="POST" class="flex flex-col sm:flex-row items-center gap-4">
+        <input type="email" name="email" required placeholder="Enter your email" class="p-3 rounded w-full sm:w-auto flex-1 border border-green-300" />
+        <button type="submit" class="bg-green-800 text-white px-6 py-2 rounded hover:bg-green-900">Subscribe</button>
+      </form>
+    </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="bg-green-50 py-12 px-4">
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-green-900 mb-4">Contact Us</h2>
-    <p class="text-gray-700 mb-6">We'd love to hear from you. Reach out for prayer requests, questions, or encouragement.</p>
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-4">Contact Us</h2>
+      <p class="text-gray-700 mb-6">We'd love to hear from you. Reach out for prayer requests, questions, or encouragement.</p>
 
-    <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-4 max-w-xl mx-auto">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500">
-      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-      <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded-lg hover:bg-green-800">Send Message</button>
-    </form>
+      <form action="https://formspree.io/f/your_contact_form" method="POST" class="space-y-4 max-w-xl mx-auto">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg border border-green-300" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg border border-green-300" />
+        <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded-lg border border-green-300"></textarea>
+        <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded-lg hover:bg-green-800">Send Message</button>
+      </form>
 
-    <div class="mt-8">
-      <p class="font-semibold text-green-800 mb-2">Follow Us</p>
-      <div class="flex justify-center space-x-6 text-green-700 text-2xl">
-        <a href="https://instagram.com/yourhandle" target="_blank" aria-label="Instagram">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 2 .3 2.4.5.6.2 1.1.6 1.6 1.1.5.5.9 1 1.1 1.6.2.4.4 1.2.5 2.4.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 2-.5 2.4-.2.6-.6 1.1-1.1 1.6-.5.5-1 .9-1.6 1.1-.4.2-1.2.4-2.4.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-2-.3-2.4-.5-.6-.2-1.1-.6-1.6-1.1-.5-.5-.9-1-.1.6-.2-.4-.4-1.2-.5-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-2 .5-2.4.2-.6.6-1.1 1.1-1.6.5-.5 1-.9 1.6-1.1.4-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7.1.1 5.9.2 4.9.5 4.2.8c-.8.3-1.6.8-2.3 1.5C.8 3 0.3 3.8 0 4.6.5 5.3.2 6.3.1 7.5.1 8.7 0 9.1 0 12c0 2.9.1 3.3.1 4.5.1 1.2.4 2.2.6 2.9.3.8.8 1.6 1.5 2.3.7.7 1.5 1.2 2.3 1.5.7.3 1.7.6 2.9.6 1.2.1 1.6.1 4.5.1s3.3 0 4.5-.1c1.2-.1 2.2-.4 2.9-.6.8-.3 1.6-.8 2.3-1.5.7-.7 1.2-1.5 1.5-2.3.3-.7.6-1.7.6-2.9.1-1.2.1-1.6.1-4.5s0-3.3-.1-4.5c-.1-1.2-.4-2.2-.6-2.9-.3-.8-.8-1.6-1.5-2.3C20.2.8 19.4.3 18.6 0c-.7-.3-1.7-.6-2.9-.6C15.3.1 14.9 0 12 0zM12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.7a1.4 1.4 0 1 1-1.4-1.4 1.4 1.4 0 0 1 1.4 1.4z"/>
-          </svg>
-        </a>
-
-        <a href="https://youtube.com/yourchannel" target="_blank" aria-label="YouTube">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.8-1.7-.8-2.1-.9C17.5 2.7 12 2.7 12 2.7s-5.5 0-8.6.3c-.4.1-1.3.1-2.1.9-.6.6-.8 2.3-.8 2.3S0 8.3 0 10.4v2.3c0 2.1.5 4.2.5 4.2s.2 1.6.8 2.3c.8.8 1.8.8 2.3.9 1.7.1 7.4.3 7.4.3s5.5 0 8.6-.3c.4 0 1.3-.1 2.1-.9.6-.6.8-2.3.8-2.3s.5-2.1.5-4.2v-2.3c0-2.1-.5-4.2-.5-4.2zM9.5 14.7V8.1l6.3 3.3-6.3 3.3z"/>
-          </svg>
-        </a>
+      <div class="mt-8">
+        <p class="font-semibold text-green-800 mb-2">Follow Us</p>
+        <div class="flex justify-center space-x-6 text-green-700 text-2xl">
+          <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+          <a href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
+          <a href="https://wa.me/yourwhatsapp" target="_blank">WhatsApp</a>
+          <a href="https://t.me/yourtelegram" target="_blank">Telegram</a>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Audio toggle -->
+  <div class="fixed bottom-4 right-4 z-50">
+    <button onclick="toggleAudio()" class="bg-green-800 text-white px-4 py-2 rounded shadow-lg">Toggle Ambient</button>
+    <audio id="ambient-audio" loop>
+      <source src="sounds/ambient.mp3" type="audio/mpeg">
+    </audio>
   </div>
-</section>
 
-
-  <!-- Footer -->
-  <footer class="bg-green-200 text-center text-sm py-6 text-green-800">
-    © 2025 Sacred Stillness. All rights reserved.
-  </footer>
-
-  <!-- AOS JavaScript -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Scripts -->
   <script>
-    AOS.init({
-      duration: 1200,
-      easing: 'ease-in-out',
-      once: true,
-    });
+    // Toggle audio
+    function toggleAudio() {
+      const audio = document.getElementById("ambient-audio");
+      if (audio.paused) audio.play();
+      else audio.pause();
+    }
+
+    // Load verse
+    const kjvVerses = [
+      "Psalm 23:1", "Isaiah 41:10", "Romans 8:28", "Proverbs 3:5", "Philippians 4:13",
+      "John 3:16", "2 Timothy 1:7", "Matthew 11:28", "Psalm 46:10", "Joshua 1:9",
+      "Romans 12:2", "Psalm 118:24", "James 1:5", "1 Peter 5:7", "Isaiah 40:31"
+    ];
+    function getVerseOfTheDayIndex() {
+      const today = new Date();
+      return Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000) % kjvVerses.length;
+    }
+    async function loadVerseOfTheDay() {
+      const reference = kjvVerses[getVerseOfTheDayIndex()];
+      try {
+        const res = await fetch(`https://bible-api.com/${reference}?translation=kjv`);
+        const data = await res.json();
+        document.getElementById("daily-verse").textContent = `"${data.text.trim()}"`;
+        document.getElementById("daily-reference").textContent = `— ${data.reference}`;
+      } catch {
+        document.getElementById("daily-verse").textContent = "\u201cBe still and know that I am God.\u201d";
+        document.getElementById("daily-reference").textContent = "— Psalm 46:10";
+      }
+    }
+    loadVerseOfTheDay();
   </script>
-<!-- Ambient Sound Toggle -->
-<div class="fixed bottom-6 right-6 z-50">
-  <button onclick="toggleAmbient()" id="ambientBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full shadow">
-    🔊 Ambient Sound
-  </button>
-</div>
-
-<audio id="ambientAudio" loop>
-  <source src="audio/ambient-stream.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
-
-<script>
-  let isPlaying = false;
-  const audio = document.getElementById("ambientAudio");
-  const btn = document.getElementById("ambientBtn");
-
-  function toggleAmbient() {
-    if (isPlaying) {
-      audio.pause();
-      btn.textContent = "🔊 Ambient Sound";
-    } else {
-      audio.play();
-      btn.textContent = "🔇 Stop Ambient";
-    }
-    isPlaying = !isPlaying;
-  }
-</script>
-
-  <script>
-  const kjvVerses = [
-    "Psalm 23:1", "Isaiah 41:10", "Romans 8:28", "Proverbs 3:5", "Philippians 4:13",
-    "John 3:16", "2 Timothy 1:7", "Matthew 11:28", "Psalm 46:10", "Joshua 1:9",
-    "Romans 12:2", "Psalm 118:24", "James 1:5", "1 Peter 5:7", "Isaiah 40:31",
-    "Psalm 91:1", "Hebrews 11:1", "John 14:27", "Galatians 6:9", "Matthew 6:33",
-    "2 Corinthians 5:7", "Ephesians 2:8", "Matthew 5:14", "Psalm 34:8", "Lamentations 3:23"
-  ];
-
-  function getVerseOfTheDayIndex() {
-    const today = new Date();
-    const dayOfYear = Math.floor(
-      (today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24)
-    );
-    return dayOfYear % kjvVerses.length;
-  }
-
-  async function loadVerseOfTheDay() {
-    const index = getVerseOfTheDayIndex();
-    const reference = kjvVerses[index];
-    try {
-      const res = await fetch(`https://bible-api.com/${reference}?translation=kjv`);
-      const data = await res.json();
-      document.getElementById("daily-verse").textContent = `"${data.text.trim()}"`;
-      document.getElementById("daily-reference").textContent = `— ${data.reference}`;
-    } catch (e) {
-      document.getElementById("daily-verse").textContent = "“Be still and know that I am God.”";
-      document.getElementById("daily-reference").textContent = "— Psalm 46:10";
-    }
-  }
-
-  loadVerseOfTheDay();
-</script>
-
-  
 </body>
 </html>
