@@ -39,6 +39,7 @@
   <section class="bg-green-50 py-12 px-6" data-aos="fade-up">
     <div class="max-w-2xl mx-auto text-center">
       <h3 class="text-xl font-semibold mb-4 text-green-800">🌞 Daily Wisdom</h3>
+      <span id="verse-text"></span> (<span id="verse-reference"></span>)
       <blockquote class="italic text-gray-700 text-lg">
         "Be still, and know that I am God." — Psalm 46:10
       </blockquote>
@@ -143,6 +144,33 @@
     isPlaying = !isPlaying;
   }
 </script>
+  <script>
+        async function fetchAndDisplayVerse() {
+      // Replace with your API endpoint and authentication details
+      const url = "982553313355f3e38210d443ecbe3797";
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        // Extract verse text and reference from data (adjust according to API's format)
+        const verseText = data.verseText;
+        const verseReference = data.verseReference;
+
+        document.getElementById("verse-text").textContent = verseText;
+        document.getElementById("verse-reference").textContent = verseReference;
+
+      } catch (error) {
+        console.error("Error fetching verse:", error);
+        document.getElementById("verse-text").textContent = "Error loading verse.";
+        document.getElementById("verse-reference").textContent = ""; // Or empty string
+      }
+    }
+
+    // Call the function to fetch and display the verse when the page loads
+    fetchAndDisplayVerse();
+
+  </script>
 
 </body>
 </html>
