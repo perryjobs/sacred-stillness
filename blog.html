@@ -61,6 +61,9 @@
     <p class="text-base md:text-lg text-green-800 mt-2">Reflections, insights, and spiritual thoughts</p>
   </section>
 
+  <h1>Latest Blog Posts</h1>
+<ul id="post-list"></ul>
+  
   <!-- Blog List -->
   <main class="max-w-3xl mx-auto px-4 py-8 space-y-8">
     <article class="border-b pb-4">
@@ -166,6 +169,29 @@
       mobileMenu.classList.toggle('hidden');
     });
   </script>
+  <script>
+  async function loadPosts() {
+    const repoUrl = "https://raw.githubusercontent.com/perryjobs/sacred-stillness/main/_posts/";
+    const fileList = [
+      // You can automate this later, but for now manually add filenames
+      "2024-06-18-test-post.md"
+    ];
+
+    const postList = document.getElementById("post-list");
+
+    for (const filename of fileList) {
+      const response = await fetch(repoUrl + filename);
+      const text = await response.text();
+      const titleMatch = text.match(/title:\s*(.+)/i);
+      const title = titleMatch ? titleMatch[1] : filename;
+      const listItem = document.createElement("li");
+      listItem.textContent = title;
+      postList.appendChild(listItem);
+    }
+  }
+
+  loadPosts();
+</script>
 
 </body>
 </html>
